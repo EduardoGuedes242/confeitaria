@@ -7,4 +7,5 @@ class PaletaCores {
   static const Color black = Color(0XFF1E1E1E);
   static const Color grey = Color(0XFF858585);
   static const Color white = Color(0XFFFFFFFF);
+  static const Color backgroundWhite = Color(0XFFF0E9E6);
 }
