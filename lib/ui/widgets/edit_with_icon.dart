@@ -2,18 +2,20 @@ import 'package:confeitaria/ui/input.dart';
 import 'package:confeitaria/ui/text.dart';
 import 'package:flutter/material.dart';
 
-class Edit extends StatelessWidget {
-  const Edit(
+class EditWithIcon extends StatelessWidget {
+  const EditWithIcon(
       {super.key,
       required this.title,
       required this.controller,
       this.hintText = '',
-      this.width = 0});
+      this.width = 0,
+      required this.iconButton});
 
   final String title;
   final String hintText;
   final TextEditingController controller;
   final double width;
+  final IconButton iconButton;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -26,7 +28,10 @@ class Edit extends StatelessWidget {
           const SizedBox(height: 6),
           TextFormField(
             controller: controller,
-            decoration: EstilosInput.inputSimples.copyWith(hintText: hintText),
+            decoration: EstilosInput.inputSimples.copyWith(
+              hintText: hintText,
+              suffixIcon: iconButton,
+            ),
           ),
         ],
       ),

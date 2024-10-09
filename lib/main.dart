@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:confeitaria/pages/clientes/clientes.dart';
 import 'package:confeitaria/pages/home_page.dart';
 import 'package:confeitaria/ui/cores.dart';
 import 'package:confeitaria/ui/input.dart';
@@ -23,7 +24,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Confeitaria',
       theme: ThemeData(
-       
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),

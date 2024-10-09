@@ -22,4 +22,11 @@ class FontsEstilos {
     fontFamily: 'Open sans',
     fontWeight: FontWeight.normal,
   );
+
+  static const TextStyle textTitle = TextStyle(
+    fontSize: 18,
+    color: PaletaCores.black,
+    fontFamily: 'Open sans',
+    fontWeight: FontWeight.w600,
+  );
 }

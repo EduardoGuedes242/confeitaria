@@ -1,3 +1,4 @@
+import 'package:confeitaria/ui/cores.dart';
 import 'package:confeitaria/ui/input.dart';
 import 'package:confeitaria/ui/text.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
@@ -10,6 +11,7 @@ class Combobox extends StatelessWidget {
     required this.options,
     this.hintText = '',
     this.selectedValue,
+    this.width = 0,
     required this.onChanged,
   });
 
@@ -18,11 +20,13 @@ class Combobox extends StatelessWidget {
   final List<String> options;
   final String? selectedValue;
   final ValueChanged<String?> onChanged;
+  final double width;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 80,
+      width: width == 0 ? double.infinity : width,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -54,7 +58,7 @@ class Combobox extends StatelessWidget {
             iconStyleData: const IconStyleData(
               icon: Icon(
                 Icons.arrow_drop_down,
-                color: Colors.black45,
+                color: PaletaCores.black,
               ),
               iconSize: 24,
             ),
@@ -64,7 +68,7 @@ class Combobox extends StatelessWidget {
               ),
             ),
             menuItemStyleData: const MenuItemStyleData(
-              padding: EdgeInsets.symmetric(horizontal: 16),
+              padding: EdgeInsets.symmetric(horizontal: 10),
             ),
           ),
         ],
