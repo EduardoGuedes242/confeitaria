@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:confeitaria/ui/widgets/app_bar.dart';
 import 'package:confeitaria/ui/cores.dart';
-import 'package:confeitaria/ui/text.dart';
 import 'package:confeitaria/ui/widgets/button.dart';
 import 'package:confeitaria/ui/widgets/combobox.dart';
 import 'package:confeitaria/ui/widgets/edit.dart';
@@ -9,24 +9,19 @@ import 'package:confeitaria/ui/widgets/edit_with_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_masked_text2/flutter_masked_text2.dart';
 
-class ClientePage extends StatefulWidget {
-  const ClientePage({super.key});
+class ClienteNewPage extends StatefulWidget {
+  const ClienteNewPage({super.key});
 
   @override
-  State<ClientePage> createState() => _ClientePageState();
+  State<ClienteNewPage> createState() => _ClienteNewPageState();
 }
 
-class _ClientePageState extends State<ClientePage> {
+class _ClienteNewPageState extends State<ClienteNewPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text(
-          'Cadastro de Clientes',
-          style: FontsEstilos.textTitle,
-        ),
-        backgroundColor: PaletaCores.backgroundWhite,
+      appBar: CustomAppBar(
+        title: 'Cadastro de cliente',
       ),
       backgroundColor: PaletaCores.backgroundWhite,
       body: Center(

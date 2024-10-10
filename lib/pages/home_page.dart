@@ -1,4 +1,5 @@
-import 'package:confeitaria/pages/clientes/clientes.dart';
+import 'package:confeitaria/pages/clientes/clientes_cadastro.dart';
+import 'package:confeitaria/pages/clientes/clientes_consulta.dart';
 import 'package:confeitaria/ui/cores.dart';
 import 'package:confeitaria/ui/widgets/item_menu.dart';
 import 'package:flutter/material.dart';
@@ -57,7 +58,7 @@ class _HomePageState extends State<HomePage> {
                           Navigator.of(context).push(
                             MaterialPageRoute(
                               builder: (context) {
-                                return const ClientePage();
+                                return const ClienteSearchPage();
                               },
                             ),
                           );
