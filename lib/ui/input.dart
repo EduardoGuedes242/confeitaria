@@ -13,5 +13,12 @@ class EstilosInput {
         width: 1.5,
       ),
     ),
+    enabledBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(12),
+      borderSide: const BorderSide(
+        color: PaletaCores.black,
+        width: 0.7,
+      ),
+    ),
   );
 }

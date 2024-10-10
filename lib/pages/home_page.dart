@@ -1,3 +1,4 @@
+import 'package:confeitaria/pages/clientes/clientes.dart';
 import 'package:confeitaria/ui/cores.dart';
 import 'package:confeitaria/ui/widgets/item_menu.dart';
 import 'package:flutter/material.dart';
@@ -52,7 +53,15 @@ class _HomePageState extends State<HomePage> {
                       ItemMenu(
                         title: 'Clientes',
                         nameImage: 'clientes.png',
-                        onClick: () {},
+                        onClick: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return const ClientePage();
+                              },
+                            ),
+                          );
+                        },
                       ),
                       ItemMenu(
                         title: 'Produtos',
