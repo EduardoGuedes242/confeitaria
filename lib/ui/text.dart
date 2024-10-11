@@ -29,4 +29,11 @@ class FontsEstilos {
     fontFamily: 'Open sans',
     fontWeight: FontWeight.w600,
   );
+
+  static const TextStyle textSubTitle = TextStyle(
+    fontSize: 14,
+    color: PaletaCores.black,
+    fontFamily: 'Open sans',
+    fontWeight: FontWeight.w600,
+  );
 }

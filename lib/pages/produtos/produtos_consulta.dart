@@ -4,23 +4,21 @@ import 'package:confeitaria/pages/clientes/clientes_cadastro.dart';
 import 'package:confeitaria/ui/cores.dart';
 import 'package:confeitaria/ui/text.dart';
 import 'package:confeitaria/ui/widgets/app_bar.dart';
-import 'package:confeitaria/ui/widgets/button.dart';
-import 'package:confeitaria/ui/widgets/edit.dart';
 import 'package:confeitaria/ui/widgets/edit_with_icon.dart';
 import 'package:flutter/material.dart';
 
-class ClienteSearchPage extends StatefulWidget {
-  const ClienteSearchPage({super.key});
+class ProdutoSearchPage extends StatefulWidget {
+  const ProdutoSearchPage({super.key});
 
   @override
-  State<ClienteSearchPage> createState() => _ClienteSearchPageState();
+  State<ProdutoSearchPage> createState() => _ProdutoSearchPageState();
 }
 
-class _ClienteSearchPageState extends State<ClienteSearchPage> {
+class _ProdutoSearchPageState extends State<ProdutoSearchPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'Consulta de clientes'),
+      appBar: CustomAppBar(title: 'Consulta de Produtos'),
       body: Column(
         children: [
           SizedBox(
@@ -29,7 +27,7 @@ class _ClienteSearchPageState extends State<ClienteSearchPage> {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: EditWithIcon(
                 title: 'Pesquisar',
-                hintText: 'Nome ou Telefone',
+                hintText: 'Descrição',
                 controller: TextEditingController(),
                 iconButton: IconButton(
                   onPressed: () {},
