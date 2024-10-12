@@ -1,7 +1,9 @@
 import 'package:confeitaria/pages/clientes/clientes_cadastro.dart';
 import 'package:confeitaria/pages/clientes/clientes_consulta.dart';
 import 'package:confeitaria/pages/marcas/marcas_cadastro.dart';
+import 'package:confeitaria/pages/marcas/marcas_consulta.dart';
 import 'package:confeitaria/pages/produtos/produtos_cadastro.dart';
+import 'package:confeitaria/pages/produtos/produtos_consulta.dart';
 import 'package:confeitaria/ui/cores.dart';
 import 'package:confeitaria/ui/widgets/item_menu.dart';
 import 'package:flutter/material.dart';
@@ -73,7 +75,7 @@ class _HomePageState extends State<HomePage> {
                           Navigator.of(context).push(
                             MaterialPageRoute(
                               builder: (context) {
-                                return const ProdutoNewPage();
+                                return const ProdutoSearchPage();
                               },
                             ),
                           );
@@ -86,7 +88,7 @@ class _HomePageState extends State<HomePage> {
                           Navigator.of(context).push(
                             MaterialPageRoute(
                               builder: (context) {
-                                return const MarcaNewPage();
+                                return const MarcaSearchPage();
                               },
                             ),
                           );

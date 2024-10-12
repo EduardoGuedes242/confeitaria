@@ -6,7 +6,6 @@ import 'package:confeitaria/ui/cores.dart';
 import 'package:confeitaria/ui/widgets/button.dart';
 import 'package:confeitaria/ui/widgets/combobox.dart';
 import 'package:confeitaria/ui/widgets/edit.dart';
-import 'package:confeitaria/ui/widgets/edit_with_icon.dart';
 import 'package:flutter/material.dart';
 
 class MarcaNewPage extends StatefulWidget {
@@ -18,7 +17,7 @@ class MarcaNewPage extends StatefulWidget {
 
 class _MarcaNewPageState extends State<MarcaNewPage> {
   int radioEmbalagem = 1;
-  int radioIngredinete = 0;
+  int radioIngrediente = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -33,6 +32,7 @@ class _MarcaNewPageState extends State<MarcaNewPage> {
           child: Column(
             children: [
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     'Embalagens',
@@ -41,44 +41,27 @@ class _MarcaNewPageState extends State<MarcaNewPage> {
                   Radio(
                     value: radioEmbalagem,
                     groupValue: 0,
-                    onChanged: (value) {
-                      setState(() {
-                        if (radioEmbalagem == 0) {
-                          radioEmbalagem = 1;
-                        }
-                        if (radioEmbalagem == 1) {
-                          radioEmbalagem = 0;
-                        }
-                      });
-                    },
+                    onChanged: (value) {},
                   ),
-                  Spacer(),
+                  SizedBox(width: 40),
                   Text(
                     'Ingredientes',
                     style: FontsEstilos.textSubTitle,
                   ),
                   Radio(
-                    value: radioIngredinete,
+                    value: radioIngrediente,
                     groupValue: 0,
-                    onChanged: (value) {
-                      setState(() {
-                        if (radioIngredinete == 0) {
-                          radioIngredinete = 1;
-                        }
-                        if (radioIngredinete == 1) {
-                          radioIngredinete = 0;
-                        }
-                        print(radioIngredinete);
-                      });
-                    },
+                    onChanged: (value) {},
                   ),
                 ],
               ),
+              SizedBox(height: 8),
               Edit(
                 title: 'Nome',
+                hintText: 'Ex: Italac',
                 controller: TextEditingController(),
               ),
-              SizedBox(height: 14),
+              SizedBox(height: 16),
               Combobox(
                 title: 'Tipo Embelagem',
                 options: [
@@ -89,13 +72,14 @@ class _MarcaNewPageState extends State<MarcaNewPage> {
                   'Outros',
                 ],
                 onChanged: (value) {},
-                hintText: 'Informe a cidade',
+                hintText: 'Informe o tipo',
               ),
               Spacer(),
               Button(
                 title: 'Salvar',
                 onClick: () {},
               ),
+              SizedBox(height: 30),
             ],
           ),
         ),

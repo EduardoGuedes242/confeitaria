@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:confeitaria/pages/home_page.dart';
+import 'package:confeitaria/pages/marcas/marcas_cadastro.dart';
+import 'package:confeitaria/pages/marcas/marcas_consulta.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: const MarcaSearchPage(),
     );
   }
 }
