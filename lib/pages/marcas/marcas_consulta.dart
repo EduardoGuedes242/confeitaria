@@ -1,7 +1,9 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:confeitaria/model/marca.dart';
 import 'package:confeitaria/pages/clientes/clientes_cadastro.dart';
 import 'package:confeitaria/pages/marcas/marcas_cadastro.dart';
+import 'package:confeitaria/services/marca_service.dart';
 import 'package:confeitaria/ui/cores.dart';
 import 'package:confeitaria/ui/text.dart';
 import 'package:confeitaria/ui/widgets/app_bar.dart';
@@ -16,6 +18,27 @@ class MarcaSearchPage extends StatefulWidget {
 }
 
 class _MarcaSearchPageState extends State<MarcaSearchPage> {
+  List<MarcaModel> marcas = [];
+  final MarcasService _marcaService = MarcasService(); // Instância do service
+
+  @override
+  void initState() {
+    super.initState();
+    fetchMarcas();
+  }
+
+  // Função para buscar marcas da API via service
+  Future<void> fetchMarcas() async {
+    try {
+      final fetchedMarcas = await _marcaService.fetchMarcas();
+      setState(() {
+        marcas = fetchedMarcas;
+      });
+    } catch (e) {
+      print('Erro ao buscar marcas: $e');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -96,7 +119,14 @@ class _MarcaSearchPageState extends State<MarcaSearchPage> {
           Expanded(
             child: Container(
               width: MediaQuery.sizeOf(context).width - 20,
-              color: Colors.amber,
+              child: ListView.builder(
+                itemCount: marcas.length,
+                itemBuilder: (context, index) {
+                  return ListTile(
+                    title: Text(marcas[index].mrcNome!),
+                  );
+                },
+              ),
             ),
           )
         ],

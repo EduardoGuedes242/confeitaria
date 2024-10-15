@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:confeitaria/repositories/marca_repository.dart';
+import 'package:confeitaria/services/marca_service.dart';
 import 'package:confeitaria/ui/text.dart';
 import 'package:confeitaria/ui/widgets/app_bar.dart';
 import 'package:confeitaria/ui/cores.dart';
@@ -18,6 +20,7 @@ class MarcaNewPage extends StatefulWidget {
 class _MarcaNewPageState extends State<MarcaNewPage> {
   int radioEmbalagem = 1;
   int radioIngrediente = 1;
+  final MarcasService _marcaService = MarcasService(); // Instância do service
 
   @override
   Widget build(BuildContext context) {
@@ -77,7 +80,9 @@ class _MarcaNewPageState extends State<MarcaNewPage> {
               Spacer(),
               Button(
                 title: 'Salvar',
-                onClick: () {},
+                onClick: () {
+                  _marcaService.addMarca(nome: "Nova Marca");
+                },
               ),
               SizedBox(height: 30),
             ],
