@@ -8,7 +8,6 @@ import 'package:confeitaria/ui/widgets/edit.dart';
 import 'package:confeitaria/ui/widgets/edit_memo.dart';
 import 'package:confeitaria/ui/widgets/edit_with_icon.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_masked_text2/flutter_masked_text2.dart';
 
 class ClienteNewPage extends StatefulWidget {
   const ClienteNewPage({super.key});

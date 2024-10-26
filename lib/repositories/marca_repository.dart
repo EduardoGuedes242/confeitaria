@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:confeitaria/model/marca.dart';
-import 'package:confeitaria/services/marca_service.dart';
 import 'package:http/http.dart' as http;
 
 class MarcaRepository {

@@ -4,8 +4,6 @@ import 'package:confeitaria/pages/clientes/clientes_cadastro.dart';
 import 'package:confeitaria/ui/cores.dart';
 import 'package:confeitaria/ui/text.dart';
 import 'package:confeitaria/ui/widgets/app_bar.dart';
-import 'package:confeitaria/ui/widgets/button.dart';
-import 'package:confeitaria/ui/widgets/edit.dart';
 import 'package:confeitaria/ui/widgets/edit_with_icon.dart';
 import 'package:flutter/material.dart';
 

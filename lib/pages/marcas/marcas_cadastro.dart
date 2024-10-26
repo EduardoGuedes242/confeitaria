@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-import 'package:confeitaria/repositories/marca_repository.dart';
 import 'package:confeitaria/services/marca_service.dart';
 import 'package:confeitaria/ui/text.dart';
 import 'package:confeitaria/ui/widgets/app_bar.dart';

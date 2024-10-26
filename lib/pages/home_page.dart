@@ -1,13 +1,9 @@
-import 'package:confeitaria/pages/clientes/clientes_cadastro.dart';
 import 'package:confeitaria/pages/clientes/clientes_consulta.dart';
-import 'package:confeitaria/pages/marcas/marcas_cadastro.dart';
 import 'package:confeitaria/pages/marcas/marcas_consulta.dart';
-import 'package:confeitaria/pages/insumos/insumos_cadastro.dart';
 import 'package:confeitaria/pages/insumos/insumos_consulta.dart';
 import 'package:confeitaria/ui/cores.dart';
 import 'package:confeitaria/ui/widgets/item_menu.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

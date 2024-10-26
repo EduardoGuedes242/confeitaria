@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:confeitaria/model/marca.dart';
-import 'package:confeitaria/pages/clientes/clientes_cadastro.dart';
 import 'package:confeitaria/pages/marcas/marcas_cadastro.dart';
 import 'package:confeitaria/services/marca_service.dart';
 import 'package:confeitaria/ui/cores.dart';
