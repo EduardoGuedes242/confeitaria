@@ -9,19 +9,19 @@ import 'package:confeitaria/ui/widgets/edit.dart';
 import 'package:confeitaria/ui/widgets/edit_with_icon.dart';
 import 'package:flutter/material.dart';
 
-class ProdutoNewPage extends StatefulWidget {
-  const ProdutoNewPage({super.key});
+class InsumosCadastroPage extends StatefulWidget {
+  const InsumosCadastroPage({super.key});
 
   @override
-  State<ProdutoNewPage> createState() => _ProdutoNewPageState();
+  State<InsumosCadastroPage> createState() => _InsumosCadastroPageState();
 }
 
-class _ProdutoNewPageState extends State<ProdutoNewPage> {
+class _InsumosCadastroPageState extends State<InsumosCadastroPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(
-        title: 'Cadastro de Produto',
+        title: 'Cadastro de Insumo',
       ),
       backgroundColor: PaletaCores.backgroundWhite,
       body: Center(

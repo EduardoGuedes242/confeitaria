@@ -7,18 +7,18 @@ import 'package:confeitaria/ui/widgets/app_bar.dart';
 import 'package:confeitaria/ui/widgets/edit_with_icon.dart';
 import 'package:flutter/material.dart';
 
-class ProdutoSearchPage extends StatefulWidget {
-  const ProdutoSearchPage({super.key});
+class InsumosConsultaPage extends StatefulWidget {
+  const InsumosConsultaPage({super.key});
 
   @override
-  State<ProdutoSearchPage> createState() => _ProdutoSearchPageState();
+  State<InsumosConsultaPage> createState() => _InsumosConsultaPageState();
 }
 
-class _ProdutoSearchPageState extends State<ProdutoSearchPage> {
+class _InsumosConsultaPageState extends State<InsumosConsultaPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'Consulta de Produtos'),
+      appBar: CustomAppBar(title: 'Consulta de Insumos'),
       body: Column(
         children: [
           SizedBox(
@@ -34,7 +34,7 @@ class _ProdutoSearchPageState extends State<ProdutoSearchPage> {
                     iconButton: IconButton(
                       onPressed: () {},
                       icon: Icon(
-                        Icons.search,
+                        Icons.refresh,
                       ),
                     ),
                   ),
@@ -105,7 +105,7 @@ class _ProdutoSearchPageState extends State<ProdutoSearchPage> {
           Navigator.of(context).push(
             MaterialPageRoute(
               builder: (context) {
-                return const ProdutoNewPage();
+                return const InsumosCadastroPage();
               },
             ),
           );

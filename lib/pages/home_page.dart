@@ -1,6 +1,8 @@
 import 'package:confeitaria/pages/clientes/clientes_consulta.dart';
+import 'package:confeitaria/pages/compras/consulta_compras_page.dart';
 import 'package:confeitaria/pages/marcas/marcas_consulta.dart';
 import 'package:confeitaria/pages/insumos/insumos_consulta.dart';
+import 'package:confeitaria/pages/vendas/consulta_vendas_page.dart';
 import 'package:confeitaria/ui/cores.dart';
 import 'package:confeitaria/ui/widgets/item_menu.dart';
 import 'package:flutter/material.dart';
@@ -34,12 +36,28 @@ class _HomePageState extends State<HomePage> {
                       ItemMenu(
                         title: 'Vendas',
                         nameImage: 'vendas.png',
-                        onClick: () {},
+                        onClick: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return const VendasConstultaPage();
+                              },
+                            ),
+                          );
+                        },
                       ),
                       ItemMenu(
                         title: 'Compras',
                         nameImage: 'compras.png',
-                        onClick: () {},
+                        onClick: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return const ComprasConstultaPage();
+                              },
+                            ),
+                          );
+                        },
                       ),
                       ItemMenu(
                         title: 'Receitas',
@@ -71,7 +89,7 @@ class _HomePageState extends State<HomePage> {
                           Navigator.of(context).push(
                             MaterialPageRoute(
                               builder: (context) {
-                                return const ProdutoSearchPage();
+                                return const InsumosConsultaPage();
                               },
                             ),
                           );

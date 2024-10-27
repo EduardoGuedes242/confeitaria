@@ -8,26 +8,35 @@ class Button extends StatelessWidget {
     required this.title,
     required this.onClick,
     this.color = PaletaCores.greenPrimary,
+    this.widthButton = 0,
+    this.paddingTop = 14,
   });
 
   final String title;
   final Function onClick;
   final Color color;
+  final double widthButton;
+  final double paddingTop;
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () => onClick(),
-      child: Container(
-        height: 48,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12),
-          color: color,
-        ),
-        child: Center(
-          child: Text(
-            title,
-            style: FontsEstilos.titleButton,
+    return Padding(
+      padding: EdgeInsets.only(top: paddingTop),
+      child: GestureDetector(
+        onTap: () => onClick(),
+        child: Container(
+          height: 48,
+          width:
+              widthButton == 0 ? MediaQuery.sizeOf(context).width : widthButton,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(12),
+            color: color,
+          ),
+          child: Center(
+            child: Text(
+              title,
+              style: FontsEstilos.titleButton,
+            ),
           ),
         ),
       ),
